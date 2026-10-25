@@ -128,8 +128,8 @@ Update each row in place. Do not mark a row done from intention.
 | Surface | State on 2026-10-25 |
 |---|---|
 | Repository contents | Requirement files are in place (`CLAUDE.md`, `MEMORY.md`, `PLAN.md`, `PLAN_PHASE.md`, `README.md`, `.env.example`, `.cursor/skills/clouddesk-support/SKILL.md` symlinked from `.claude/skills/`, `docs/ARCHITECTURE.md`, `docs/API_CONTRACT.md` draft v0). Application code, tests, and sample data are absent. |
-| Implemented | Nothing. |
-| Validated locally | Nothing. `make test` and `make demo` do not exist yet. |
+| Implemented | P1-1 settings (`backend/app/core/config.py`) and JSON logging (`backend/app/core/logging.py`), branch `feature/backend-config-logging`, not merged yet. |
+| Validated locally | P1-1: `uv run pytest` (23 unit tests) and `uv run ruff check .` pass on 2026-10-25. `make test` and `make demo` do not exist yet. |
 | Cloud credentials | None used. |
 | Applied to a real account | Nothing. |
 | GitHub Actions | Workflow files are not in the repo. None have been executed. |
