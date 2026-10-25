@@ -28,3 +28,22 @@ htmlcov/
 .vscode/
 .idea/
 .DS_Store
+
+# Local runtime data (CLAUDE.md §18 rule 11)
+data/
+*.db
+*.db-journal
+
+# Terraform state, plans and per-env secrets
+.terraform/
+*.tfstate
+*.tfstate.*
+tfplan
+*.tfplan
+terraform.tfvars
+backend.hcl
+
+# Frontend
+node_modules/
+.next/
+frontend/out/
