@@ -1,9 +1,32 @@
 [project]
 name = "clouddesk"
 version = "0.1.0"
-description = "Add your description here"
+description = "CloudDesk - Autonomous Customer Support & Resolution Platform"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "langchain>=1.4.7",
+    "pydantic>=2.9",
+    "pydantic-settings>=2.6",
 ]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.17.2",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["backend", "."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+src = ["backend", "."]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "S105", "S106"]
